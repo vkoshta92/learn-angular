@@ -1,4 +1,15 @@
 <h1>Hello ji</h1>
 
-<app-user-profile></app-user-profile>
+<!-- <app-user-profile userName="ramesh" isSingle="true" salary="5000"></app-user-profile>
+<app-user-profile userName="suresh"  isSingle="true" salary="4000"></app-user-profile>
+<app-user-profile userName="thugesh" isSingle="false" salary="3000"></app-user-profile> -->
+
 <!--  jab ise app me imppport krenge tb  hi yha use kar payenge -->
+
+<!--  alag lag na ues krke ng for loop me array  se data le liya hai. -->
+<app-user-profile
+  *ngFor="let user of users"
+  [userName]="user.name"
+  [status]="user.isSingle"
+  [salary]="user.salary"
+></app-user-profile>
