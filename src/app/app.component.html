@@ -10,6 +10,7 @@
 <app-user-profile
   *ngFor="let user of users"
   [userName]="user.name"
-  [status]="user.isSingle"
+  [isSingle]="user.isSingle"
   [salary]="user.salary"
+  (myEvent)="receiveData($event)"
 ></app-user-profile>
