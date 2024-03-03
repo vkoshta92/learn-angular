@@ -1,25 +1,25 @@
-<!-- <h1>this is user prifile</h1> -->
+<h1>this is user prifile</h1>
 <!-- interpolation ya ts ki value ko inject karna -->
 <!-- <h4>Name- {{ name | titlecase }} Status-{{ status }} salary-{{ salary }}</h4> -->
 <!-- pipes -->
-<!-- <h4>Name- {{ name | uppercase }} Status-{{ status }} salary-{{ salary |currency:"INR" }}</h4> -->
+<h4>Name- {{ name | uppercase }} Status-{{ status }} salary-{{ salary |currency:"INR" }}</h4>
 
-<h2 appHighlight>{{phoneNo | countryCode:"USA"}}</h2>
+<h2>{{phoneNo | countryCode:"USA"}}</h2>
 <!-- proerty bindling -->
 <!-- <button disabled="true">Click Me</button> -->
 <!-- inject -->
-<!-- <button [disabled]="isBtnDisabled">Click Me</button> -->
+<button [disabled]="isBtnDisabled">Click Me</button>
 
 <!-- event bindling -->
-<!-- <h1>input value:{{ inputValue }}</h1> -->
+<h1>input value:{{ inputValue }}</h1>
 <!-- ab communication 2 way ho rha h h1 me frresect ho rha h kyoki  ts e h1 h1 se ts dono me data transfer ho rha h -->
 <!-- <input type="text" [value]="inputValue" (input)="onChange($event)"> -->
 <!-- short hand is input ka iske liye forms module dependency impor karmi  hogi ise banana in the box bhi bolte hai.-->
-<!-- <input type="text" [(ngModel)]="inputValue" /> -->
+<input type="text" [(ngModel)]="inputValue" />
 
 <!-- new anguler 17  control flow syntex iske liye koi dipendency  import nhinkrni hogi-->
 <!-- control flow syntex -->
-<!-- <div>
+<div>
   @for(user of users;track user.name){ @if(user.salary>20000){
   <h4>
     Name- {{ user.name }} Status-{{
@@ -36,11 +36,11 @@
   </h4>
 
   } }
-</div> -->
+</div>
 
 <!--  old directive syntex dependies import karni hogi  elemt me lagan hota hai.-->
 <!--  ye structul directive h  ye * se start hote hai. ng model attribultedirective  hai.-->
-<!-- <hr />
+<hr />
 <div *ngFor="let user of users">
   <h4 *ngIf="user.salary>50000; else elseBlock">
     Name- {{ user.name }} Status-{{
@@ -56,12 +56,9 @@
         salary-hidden
       </h4>
   </ng-template>
-</div> -->
+</div>
 
 
 
-<!-- <h1 [style.backgroundColor]="bgColor">User-{{name}}- status-{{status?"single":"coder"}} -salary-{{salary}}</h1>
-<button (click)="sendData()">Send Data</button> -->
-<!-- is appHighlight directive ko use krke direct style change kar skte hai. reuse kar skte hai -->
-<h1 #myheading appHighlight>User-{{name}}- status-{{status?"single":"coder"}} -salary-{{salary}}</h1>
+<h1>User-{{name}}- status-{{status?"single":"coder"}} -salary-{{salary}}</h1>
 <button (click)="sendData()">Send Data</button>

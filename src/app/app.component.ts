@@ -19,8 +19,8 @@ export class AppComponent {
 
   users=[
   {name:"ramesh",isSingle:true,salary:20000},
-  {name:"suresh",isSingle:true,salary:50000},
-  {name:"thugesh",isSingle:false,salary:70000},
+  // {name:"suresh",isSingle:true,salary:50000},
+  // {name:"thugesh",isSingle:false,salary:70000},
 
 
 ]
@@ -30,6 +30,9 @@ const userIndex= this.users.findIndex(user=>user.name==e.name)
 // console.log(this.users[userIndex])
 this.users[userIndex].salary=e.newSalary; // ab jo child se salry ayi h use update kar diya.
 
+}
+clear(){
+  this.users=[]
 }
 
 }
